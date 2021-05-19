@@ -16,8 +16,7 @@ int main(const int argc, const char **argv) {
 
   auto sum = to_string(m['7'] + m['4']);
 
-  cout << (sum.find_first_not_of("47") != std::string::npos ? "NO" : "YES")
-       << '\n';
+  cout << (sum.find_first_not_of("47") != string::npos ? "NO" : "YES") << '\n';
 
   return 0;
 }
