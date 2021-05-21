@@ -31,8 +31,7 @@ int main(const int argc, const char **argv) {
 
     vector<long long> ns;
     for (int i = 0; i < n.size(); ++i) {
-      long long a = (n[i] - '0') * fastPow(10, i);
-      if (a) ns.push_back(a);
+      if (auto a = (n[i] - '0') * fastPow(10, i); a) ns.push_back(a);
     }
 
     cout << ns.size() << '\n';

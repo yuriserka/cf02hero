@@ -15,11 +15,7 @@ int main(const int argc, const char **argv) {
   while (n--) {
     string s;
     cin >> s;
-
-    if (s.find("X") != string::npos and s.find("++") != string::npos)
-      ++x;
-    else
-      --x;
+    x += s.find("X") != string::npos and s.find("++") != string::npos ? 1 : -1;
   }
 
   cout << x << '\n';

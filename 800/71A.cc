@@ -11,13 +11,11 @@ int main(const int argc, const char **argv) {
   int n;
   cin >> n;
 
-  for (int i = 0; i < n; ++i) {
+  while (n--) {
     string s;
     cin >> s;
 
-    auto l = s.size();
-
-    if (l <= 10) {
+    if (auto l = s.size(); l <= 10) {
       cout << s << '\n';
     } else {
       cout << s[0] << l - 2 << s[l - 1] << '\n';

@@ -11,14 +11,12 @@ int main(const int argc, const char **argv) {
   int k, l, m, n, d;
   cin >> k >> l >> m >> n >> d;
 
-  vector<bool> v(d + 1, true);
+  vector<bool> v(d + 1, false);
 
-  for (int i = 1; i <= d; ++i) {
-    auto hurted = !(i % k) or !(i % l) or !(i % m) or !(i % n);
-    v[i] = !hurted;
-  }
+  for (int i = 1; i <= d; ++i)
+    v[i] = !(i % k) or !(i % l) or !(i % m) or !(i % n);
 
-  cout << count(begin(v), end(v), false) << '\n';
+  cout << count(begin(v), end(v), true) << '\n';
 
   return 0;
 }

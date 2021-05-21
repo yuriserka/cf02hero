@@ -18,6 +18,7 @@ int main(const int argc, const char **argv) {
 
     if (a + b + c >= 2) ++ans;
   }
+
   cout << ans << '\n';
 
   return 0;

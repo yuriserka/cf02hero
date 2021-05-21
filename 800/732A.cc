@@ -12,8 +12,7 @@ int main(const int argc, const char **argv) {
   cin >> k >> r;
 
   for (long long i = 1;; ++i) {
-    auto md = (k * i) % 10;
-    if (md == r or !md) {
+    if (auto md = (k * i) % 10; md == r or !md) {
       cout << i << '\n';
       break;
     }
