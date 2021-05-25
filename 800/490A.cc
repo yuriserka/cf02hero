@@ -11,38 +11,20 @@ int main(const int argc, const char **argv) {
   int n;
   cin >> n;
 
-  vector<pair<int, int>> v(n);
+  vector<vector<int>> v(3);
   for (int i = 0, t; i < n; ++i) {
     cin >> t;
-    v[i] = {t, i + 1};
+    v[t - 1].push_back(i + 1);
   }
 
-  const auto updt_v = [&v](int t) {
-    const auto find_fn = [&v](int val) {
-      const auto it =
-          find_if(begin(v), end(v), [&val](auto p) { return p.first == val; });
-      return make_tuple(it, *it);
-    };
+  auto s = min_element(begin(v), end(v), [](const auto v1, const auto v2) {
+             return v2.size() > v1.size();
+           })->size();
 
-    const auto [it, val] = find_fn(t);
-    if (it == end(v)) throw invalid_argument("");
-    v.erase(it);
-    return val;
-  };
-
-  vector<vector<pair<int, int>>> ans;
-  for (int i = 0; i < n; ++i) {
-    try {
-      ans.push_back({updt_v(1), updt_v(2), updt_v(3)});
-    } catch (...) {
-      break;
-    }
-  }
-
-  cout << ans.size() << '\n';
-  for (const auto a : ans) {
-    for (int i = 0; i < a.size(); ++i) {
-      cout << a[i].second << (i < a.size() - 1 ? ' ' : '\n');
+  cout << s << '\n';
+  for (int i = 0; i < s; ++i) {
+    for (int j = 0; j < 3; ++j) {
+      cout << v[j][i] << (j < 2 ? ' ' : '\n');
     }
   }
 
