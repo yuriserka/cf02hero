@@ -1,5 +1,5 @@
 <p align="center">
-  <h3 align="center">CF 0 2 Hero</h3>
+  <h3 align="center">Competitive Programming 0 2 Hero</h3>
 </p>
 
 ## About The Project
