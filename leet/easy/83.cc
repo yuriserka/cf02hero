@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/remove-linked-list-elements/
+// https://leetcode.com/problems/remove-duplicates-from-sorted-list/
 
 #include <bits/stdc++.h>
 
@@ -16,14 +16,19 @@ using namespace std;
  */
 class Solution {
  public:
-  ListNode* removeElements(ListNode* head, int val) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
-    ListNode* prev = head;
+  ListNode* deleteDuplicates(ListNode* head) {
+    int curr = head ? head->val : INT_MAX;
+    int occ = 0;
     ListNode* it = head;
+    ListNode* prev = head;
     while (it) {
-      if (it->val == val) {
+      if (it->val != curr) {
+        curr = it->val;
+        occ = 1;
+      } else {
+        ++occ;
+      }
+      if (occ >= 2) {
         if (prev == it) {
           head = it->next;
           prev = head;
