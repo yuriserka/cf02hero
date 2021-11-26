@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   string longestCommonPrefix(vector<string>& strs) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int maxlen = strs[0].size();
     string p = "";
     for (int i = 0; i < maxlen; ++i) {

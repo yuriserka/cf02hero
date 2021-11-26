@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   vector<int> productExceptSelf(vector<int>& nums) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int n = nums.size();
     vector<int> ans(n);
 

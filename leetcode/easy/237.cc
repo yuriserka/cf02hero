@@ -15,9 +15,6 @@ using namespace std;
 class Solution {
  public:
   void deleteNode(ListNode* node) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     node->val = node->next->val;
     node->next = node->next->next;
   }

@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   int romanToInt(string s) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int r = 0;
     for (int i = 0, l = s.size(); i < l; ++i) {
       char c = s[i];

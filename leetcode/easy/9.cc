@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   bool isPalindrome(int x) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     if (x < 0) return false;
 
     auto s = to_string(x);

@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   int maxSubArray(vector<int>& nums) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int n = nums.size();
 
     if (n == 1) return nums[0];

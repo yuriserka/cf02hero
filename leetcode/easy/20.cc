@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   bool isValid(string s) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     stack<char> st;
     for (const auto &ch : s) {
       if (ch == '[' || ch == '{' || ch == '(') {

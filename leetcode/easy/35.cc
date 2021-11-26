@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   int searchInsert(vector<int>& nums, int target) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int l = 0, r = nums.size() - 1;
     int ans = 0;
     while (l <= r) {

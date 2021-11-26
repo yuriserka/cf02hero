@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   int maxProfit(vector<int>& prices) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     int ans = 0;
     int min_val = INT_MAX;
     for (const int p : prices) {

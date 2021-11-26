@@ -21,9 +21,6 @@ class Solution {
 
  public:
   vector<int> inorderTraversal(TreeNode* root) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     if (!root) return {};
     inorderTraversal(root->left);
     ans.push_back(root->val);

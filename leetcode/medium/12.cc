@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   string intToRoman(int num) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     vector<pair<int, string>> m = {{1000, "M"}, {500, "D"}, {100, "C"},
                                    {50, "L"},   {10, "X"},  {5, "V"},
                                    {1, "I"}};

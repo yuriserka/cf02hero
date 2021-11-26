@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   int reverse(int x) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     auto neg = x < 0;
     stringstream ss;
     ss << abs(x);

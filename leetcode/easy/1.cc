@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   vector<int> twoSum(vector<int>& nums, int target) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(nullptr);
-
     const auto l = nums.size();
     unordered_map<int, int> m;
     for (auto i = 0; i < l; ++i) {
