@@ -17,9 +17,6 @@ using namespace std;
 class Solution {
  public:
   ListNode* removeElements(ListNode* head, int val) {
-    ios_base::sync_with_stdio(false);
-    cin.tie(NULL);
-
     ListNode* prev = head;
     ListNode* it = head;
     while (it) {

@@ -7,9 +7,6 @@ using namespace std;
 class Solution {
  public:
   int maxProduct(vector<int>& nums) {
-    cin.tie(NULL);
-    ios_base::sync_with_stdio(false);
-
     long long n = nums.size();
     int ans = nums[0];
     int curr_min = 1, curr_max = 1;
