@@ -1,4 +1,4 @@
-// https://leetcode.com/problems/delete-node-in-a-linked-list/
+// https://leetcode.com/problems/binary-gap/
 
 #include <bits/stdc++.h>
 
