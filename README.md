@@ -25,7 +25,7 @@ To get a local copy up and running follow these simple steps.
 
 1. Clone the repo
    ```sh
-   git clone https://github.com/yuriserka/cf02hero.git
+   git clone https://github.com/yuriserka/cp02hero.git
    ```
 
 ## Usage
